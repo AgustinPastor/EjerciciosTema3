@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -278,5 +279,129 @@ private static void duplicarPositivos (int [] array){
     }
 
      */
+
+//EJERCICIOS BASE
+    //ARRAYS
+        //Ejercicio1
+            /*
+            Realiza un programa que pida 10 números por teclado y que los almacene en un array.
+            A continuación se mostrará el contenido de ese array junto al índice (0 – 9)
+
+
+    public static void main(String[] args) {
+        Scanner scanner =new Scanner(System.in);
+        int[] numeros = new int[10];
+
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println("Introdice el numerp");
+            int numeroIntroducido = scanner.nextInt();
+            numeros[i] = numeroIntroducido;
+        }
+
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.printf("El numero en la posicion" +
+                    " %d es %d\n",i,numeros[i]);
+        }
+
+
+             */
+        //Ejercicio2
+            /*
+            2. Crear un programa que genere 30 números aleatorios entre 0 - 10 y los guarde en un array.
+            Una vez metidos, se deberá mostrar:
+            - Numero de puntos obtenidos
+            - Media de puntos obtenidos
+
+
+    public static void main(String[] args) {
+        int [] array=new int[30];
+        int suma=0;
+        for (int i=0;i<array.length;i++){
+            array[i]=(int)(Math.random()*11);
+            suma+=array[i];
+        }
+
+        double media=(double) suma/30;
+
+        System.out.println("Numeros obtenidos: "+Arrays.toString(array));
+        System.out.println("Suma: "+suma);
+        System.out.println("Media: "+media);
+
+
+    }
+
+             */
+
+
+    //ARRAYLIST
+        //Ejercicio1
+            /*
+            1. Crea un ArrayList de String y realiza las siguientes acciones
+                - Guarda manualmente 10 palabras
+                - Imprime por pantalla todas las palabras del arraylist
+
+
+    public static void main(String[] args) {
+
+        ArrayList<String> arrayList=new ArrayList<>();
+        arrayList.add("hi");
+        arrayList.add("hi");
+        arrayList.add("hi");
+        arrayList.add("hi");
+        arrayList.add("hi");
+        arrayList.add("hi");
+        arrayList.add("hi");
+        arrayList.add("hi");
+        arrayList.add("hi");
+        arrayList.add("hi");
+
+        System.out.println("ArrayList: "+arrayList);
+
+
+
+    }
+
+             */
+        //Ejercicio 2
+            /*
+    Crea un ArrayList de numeros enteros que guarde valores aleatorios (entre 0 y 100).
+    Una vez introducidos todos calcula la suma, la media, el máximo y el mínimo de esos números.
+
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arrayList=new ArrayList<Integer>();
+
+        for (int i=0;i<10;i++){
+            int numAleatorio=(int)(Math.random()*101);
+            arrayList.add(numAleatorio);
+        }
+
+        int suma=0;
+        int max =Integer.MIN_VALUE;
+        int min =Integer.MAX_VALUE;
+
+        for (int num : arrayList) {
+            suma += num;
+            if (num > max) {
+                max = num;
+            }
+            if (num < min) {
+                min = num;
+            }
+        }
+
+        // Calcular la media
+        double media = (double) suma / arrayList.size();
+
+        // Imprimir los resultados
+        System.out.println("Números generados: " + arrayList);
+        System.out.println("Suma: " + suma);
+        System.out.println("Media: " + media);
+        System.out.println("Máximo: " + max);
+        System.out.println("Mínimo: " + min);
+    }
+
+             */
 }
+
 
